@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecognizeGallery">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#64A61A">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:title="Regresar"
+                android:layout_margin="10dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:background="#64A61A"
+                android:layout_alignParentStart="true"
+                android:onClick="pressback"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galería"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/txtitulo"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_refresh_24"
+                android:title="Refrescar"
+                android:background="#64A61A"
+                android:onClick="refreshpress"
+
+                android:layout_gravity="right"
+                android:layout_margin="10dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:id="@+id/refresh"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivphoto"
+        android:layout_width="match_parent"
+        android:layout_height="377dp"
+        android:layout_below="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/txtdisplay"
+        android:layout_width="411dp"
+        android:layout_height="181dp"
+        android:layout_below="@+id/ivphoto"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="117dp"
+        android:scrollbars="vertical"
+        android:text="Texto detectado"
+        android:textAlignment="center"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#64A61A"
+        android:text="Continuar"
+        android:textSize="32dp"
+        android:onClick="detectarPais"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"
+        />
+</RelativeLayout>

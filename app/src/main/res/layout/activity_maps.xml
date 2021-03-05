@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="357dp"
+        android:layout_x="0dp"
+        android:layout_y="157dp"
+        tools:context=".MapsActivity" />
+    <ImageView
+        android:id="@+id/imgFotoPais"
+        android:layout_width="243dp"
+        android:layout_height="127dp"
+        android:layout_x="147dp"
+        android:layout_y="19dp"
+        map:srcCompat="@color/black" />
+
+    <TextView
+        android:id="@+id/txtNombrePais"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_x="9dp"
+        android:layout_y="74dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtInfoPais"
+        android:layout_width="388dp"
+        android:layout_height="204dp"
+        android:layout_x="13dp"
+        android:layout_y="522dp"
+        android:text="TextView"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_x="10dp"
+        android:layout_y="0dp"
+        android:textStyle="bold"
+        android:backgroundTint="#64A61A"
+        android:text="Salir" />
+</AbsoluteLayout>
